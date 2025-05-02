@@ -141,7 +141,8 @@ cython_debug/
 .vscode/
 
 # Data files
-# data/raw/
+# ignore any CSVs in data/raw
+data/raw/*.csv
 # etl/data/processed/
 # data/output/
 
