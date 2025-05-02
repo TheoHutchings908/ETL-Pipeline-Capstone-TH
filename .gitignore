@@ -142,7 +142,7 @@ cython_debug/
 
 # Data files
 # ignore any CSVs in data/raw
-data/raw/*.csv
+data/*.csv
 # etl/data/processed/
 # data/output/
 
