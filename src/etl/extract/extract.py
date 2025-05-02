@@ -14,7 +14,7 @@ logger = setup_logger(
 EXPECTED_PERFORMANCE = 0.0001
 
 FILE_PATH = os.path.join(
-    os.path.dirname(__file__), '../../data/raw/car_sales_data.csv'
+    os.path.dirname(__file__), '../../data/car_sales_data.csv'
 )
 
 TYPE = 'csv'  
