@@ -99,8 +99,8 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-# .env      # Should not be committed left for demo
-# .env.*    # Should not be committed left for demo
+.env      # Should not be committed left for demo
+.env.*    # Should not be committed left for demo
 .venv
 venv/
 ENV/

@@ -1,7 +1,8 @@
 from pathlib import Path
+import pandas as pd
+import logging
 from etl.extract.extract import extract_data
 from utils.logging_utils import setup_logger
-import logging
 from etl.transform.clean_sales import (
     clean_dates,
     clean_strings,
@@ -11,31 +12,38 @@ from etl.transform.clean_sales import (
     drop_duplicates,
 )
 
-logger = setup_logger(
-    __name__,
-    'transforming_data.log',
-    level=logging.DEBUG
-)
+
+logger = setup_logger(__name__, "transforming_data.log", level=logging.DEBUG)
 
 
-def main():
-    sales = extract_data()
+POP_PATH = Path(__file__).resolve().parents[3] / "data" / "population.csv"
+pop_df = pd.read_csv(POP_PATH)
+pop_df["year"] = pop_df["Year"].astype(int)
+pop_df = pop_df[["year", "population"]]
 
-    sales_clean = (
-        sales
-        .pipe(clean_dates)
+
+def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
+    df = (
+        df_raw
+        .pipe(clean_dates)      
         .pipe(clean_strings)
         .pipe(drop_empty)
         .pipe(fix_car_typos)
         .pipe(fill_numeric)
         .pipe(drop_duplicates)
     )
-    
-    logger.info(f"Cleaning complete: {sales_clean.shape[0]} rows, {sales_clean.shape[1]} cols")
 
-    out_path = Path(__file__).resolve().parents[3] / "data" / "car_sales_clean.csv"
-    sales_clean.to_csv(out_path, index=False)
+    df["year"] = df["Date"].dt.year
+    df = df.merge(pop_df, on="year", how="left")
+    df = df.drop(columns="year")
+
+    logger.info(f"After merge with population: {df.shape[0]} rows, {df.shape[1]} cols")
+    return df
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     raw    = extract_data()
+#     merged = transform_sales(raw)
+#     out    = Path(__file__).resolve().parents[3] / "data" / "car_sales_enriched.csv"
+#     merged.to_csv(out, index=False)
+#     logger.info(f"Wrote enriched CSV to {out}")

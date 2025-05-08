@@ -27,16 +27,16 @@ TYPE = 'csv'
 def extract_data() -> pd.DataFrame:
     start_time = timeit.default_timer()
     try:
-        sales = pd.read_csv(FILE_PATH)
+        raw = pd.read_csv(FILE_PATH)
         extract_sales_execution_time = timeit.default_timer() - start_time
         log_extract_success(
             logger,
             TYPE,
-            sales.shape,
+            raw.shape,
             extract_sales_execution_time,
             EXPECTED_PERFORMANCE
         )
-        return sales
+        return raw
     except Exception as e:
         logger.setLevel(logging.ERROR)
         logger.error(f"Error loading {FILE_PATH}: {e}")
