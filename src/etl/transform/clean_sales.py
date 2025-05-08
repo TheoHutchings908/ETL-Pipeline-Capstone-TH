@@ -45,22 +45,3 @@ def fill_numeric(df: pd.DataFrame) -> pd.DataFrame:
         median = df[col].median()
         df[col] = df[col].fillna(median)
     return df
-
-
-def fix_car_typos(df: pd.DataFrame) -> pd.DataFrame:
-    # Correct common misspellings in Car Make/Model.
-    df = df.copy()
-    df['Car Make'] = df['Car Make'].replace({
-        'Frod': 'Ford',
-        'Frd': 'Ford',
-        'Tooyta': 'Toyota',
-        'Tyoota': 'Toyota',
-        'Hnoda': 'Honda',
-    })
-    df['Car Model'] = df['Car Model'].replace({
-        'Silvreado': 'Silverado',
-        'Sliverado': 'Silverado',
-        'Civci': 'Civic',
-        'Corolal': 'Corolla',
-    })
-    return df

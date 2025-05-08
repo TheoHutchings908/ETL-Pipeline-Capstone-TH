@@ -1,4 +1,3 @@
-# app/db_utils.py
 import os
 import pandas as pd
 from sqlalchemy import create_engine
@@ -22,7 +21,7 @@ def get_available_years() -> list[int]:
     engine = get_engine()
     sql = """
         SELECT DISTINCT
-          EXTRACT(YEAR FROM "Date")::INT AS year
+            EXTRACT(YEAR FROM date)::INT AS year
         FROM sales
         ORDER BY year
     """
@@ -30,24 +29,11 @@ def get_available_years() -> list[int]:
     return df["year"].tolist()
 
 
-def load_sales(year: int) -> pd.DataFrame:
-    sql = """
-    SELECT
-      "Date"            AS date,
-      "Car Make"        AS make,
-      "Car Model"       AS model,
-      "Sale Price"      AS sale_price,
-      "Commission Earned" AS commission_earned,
-      population
-    FROM sales
-    WHERE EXTRACT(YEAR FROM "Date") = %(year)s
-    ORDER BY "Date"
-    """
+def load_all_sales() -> pd.DataFrame:
     engine = get_engine()
     df = pd.read_sql(
-        sql,
+        "SELECT * FROM sales",
         engine,
-        params={"year": year},
-        parse_dates=["date"],
+        parse_dates=["date"]
     )
     return df

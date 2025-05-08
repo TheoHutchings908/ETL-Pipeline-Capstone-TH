@@ -7,7 +7,6 @@ from etl.transform.clean_sales import (
     clean_dates,
     clean_strings,
     drop_empty,
-    fix_car_typos,
     fill_numeric,
     drop_duplicates,
 )
@@ -28,7 +27,6 @@ def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
         .pipe(clean_dates)      
         .pipe(clean_strings)
         .pipe(drop_empty)
-        .pipe(fix_car_typos)
         .pipe(fill_numeric)
         .pipe(drop_duplicates)
     )
@@ -36,6 +34,8 @@ def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
     df["year"] = df["Date"].dt.year
     df = df.merge(pop_df, on="year", how="left")
     df = df.drop(columns="year")
+    df = df.rename(columns={"Date": "date", "Car Make": "make", "Car Model":"model", "Car Price": "price"})
+
 
     logger.info(f"After merge with population: {df.shape[0]} rows, {df.shape[1]} cols")
     return df
