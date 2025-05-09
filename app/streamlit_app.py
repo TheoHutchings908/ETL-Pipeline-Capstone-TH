@@ -11,7 +11,9 @@ def main():
         initial_sidebar_state="expanded"
     )
     st.title("🚗 Car Sales Dashboard")
-
+    
+    st.markdown("---")
+    
     # 1) Load & prepare data
     df_all = load_all_sales()
     df_all["date"]  = pd.to_datetime(df_all["date"])
@@ -83,8 +85,8 @@ def main():
 
     st.plotly_chart(fig2, use_container_width=True)
 
-    # 6) Raw data expander
-    with st.expander("🔽 Show raw data"):
+    # 6)  data expander
+    with st.expander("🔽 Show data"):
         st.dataframe(df, use_container_width=True, hide_index=True)
 
 
