@@ -3,6 +3,7 @@ import streamlit as st
 import plotly.express as px
 from db_utils import load_all_sales
 
+
 def main():
     st.set_page_config(
         page_title="Car Sales Dashboard",
@@ -31,9 +32,9 @@ def main():
     ]
 
     # 3) KPIs
-    total_sales   = len(df)
+    total_sales = len(df)
     total_revenue = df["Sale Price"].sum()
-    avg_price     = df["Sale Price"].mean()
+    avg_price = df["Sale Price"].mean()
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("📅 Records", f"{total_sales:,}")
@@ -85,6 +86,7 @@ def main():
     # 6) Raw data expander
     with st.expander("🔽 Show raw data"):
         st.dataframe(df, use_container_width=True, hide_index=True)
+
 
 if __name__ == "__main__":
     main()
