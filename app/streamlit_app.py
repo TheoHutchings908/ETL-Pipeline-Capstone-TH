@@ -74,6 +74,7 @@ def main():
           .sum()
           .reset_index(name="revenue")
           .sort_values("revenue", ascending=False)
+          .head(5)
     )
     fig2 = px.bar(
         by_make_df, x="make", y="revenue",
