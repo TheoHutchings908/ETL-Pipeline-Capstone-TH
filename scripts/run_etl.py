@@ -1,21 +1,19 @@
-import sys, os
-from dotenv import load_dotenv
-import logging
 from etl.extract.extract import extract_data
-from etl.transform.transform import transform_sales
-from etl.load.load import write_data
-
-sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
-
-load_dotenv()
-
-logging.basicConfig(filename="logs/etl.log", level=logging.INFO)
+from etl.transform.transform import transform_sales, load_population_monthly
+from etl.load.load import write_sales, write_population
 
 
 def main():
-    raw = extract_data()
-    clean = transform_sales(raw)
-    write_data(clean)
+    # 1) Extract
+    raw_sales = extract_data()
+
+    # 2) Transform
+    sales_df = transform_sales(raw_sales)
+    pop_df = load_population_monthly()
+
+    # 3) Load
+    write_sales(sales_df)
+    write_population(pop_df)
 
 
 if __name__ == "__main__":

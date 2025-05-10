@@ -9,13 +9,12 @@ logger = setup_logger(__name__, "load_data.log")
 load_dotenv()
 
 DB_URL = (
-    f"postgresql://{os.getenv('POSTGRES_USER')}:"
+    f"postgresql://{os.getenv('POSTGRES_USER')}:" 
     f"{os.getenv('POSTGRES_PASSWORD')}@"
-    f"{os.getenv('POSTGRES_HOST', 'localhost')}:"
+    f"{os.getenv('POSTGRES_HOST', 'localhost')}:" 
     f"{os.getenv('POSTGRES_PORT', '5432')}/"
     f"{os.getenv('POSTGRES_DB')}"
 )
-
 
 _engine = None
 
@@ -27,8 +26,15 @@ def get_engine():
     return _engine
 
 
-def write_data(df: pd.DataFrame, table_name: str = "sales"):
+def write_table(df: pd.DataFrame, table_name: str):
     engine = get_engine()
     df.to_sql(table_name, engine, if_exists="replace", index=False)
-    logger.info(f"Wrote {len(df)} rows to {table_name}@Postgres")
+    logger.info(f"Wrote {len(df)} rows to '{table_name}' @ Postgres")
 
+
+def write_sales(df: pd.DataFrame):
+    write_table(df, table_name="sales")
+
+
+def write_population(df: pd.DataFrame):
+    write_table(df, table_name="population")

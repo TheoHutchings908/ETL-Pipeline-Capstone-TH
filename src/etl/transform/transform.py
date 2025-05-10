@@ -1,49 +1,41 @@
+import logging
 from pathlib import Path
 import pandas as pd
-import logging
-from etl.extract.extract import extract_data
 from utils.logging_utils import setup_logger
-from etl.transform.clean_sales import (
-    clean_dates,
-    clean_strings,
-    drop_empty,
-    fill_numeric,
-    drop_duplicates,
-)
-
 
 logger = setup_logger(__name__, "transforming_data.log", level=logging.DEBUG)
 
 
-POP_PATH = Path(__file__).resolve().parents[3] / "data" / "population.csv"
-pop_df = pd.read_csv(POP_PATH)
-pop_df["year"] = pop_df["Year"].astype(int)
-pop_df = pop_df[["year", "population"]]
+def load_population_monthly() -> pd.DataFrame:
+    POP_PATH = Path(__file__).resolve().parents[3] / "data" / "population.csv"
+    pop = (
+        pd.read_csv(POP_PATH, parse_dates=["date"])
+        .sort_values("date")
+        .reset_index(drop=True)
+    )
+    logger.info(f"Loaded population: {len(pop)} rows")
+    return pop
 
 
 def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
+    from etl.transform.clean_sales import (
+        clean_dates, clean_strings, drop_empty, fill_numeric, drop_duplicates
+    )
     df = (
         df_raw
-        .pipe(clean_dates)      
+        .pipe(clean_dates)
         .pipe(clean_strings)
         .pipe(drop_empty)
         .pipe(fill_numeric)
         .pipe(drop_duplicates)
     )
-
     df["year"] = df["Date"].dt.year
-    df = df.merge(pop_df, on="year", how="left")
     df = df.drop(columns="year")
-    df = df.rename(columns={"Date": "date", "Car Make": "make", "Car Model":"model", "Car Price": "price"})
-
-
-    logger.info(f"After merge with population: {df.shape[0]} rows, {df.shape[1]} cols")
+    df = df.rename(columns={
+        "Date": "date",
+        "Car Make": "make",
+        "Car Model": "model",
+        "Car Price": "price",
+    })
+    logger.info(f"Transformed sales: {df.shape[0]} rows")
     return df
-
-
-# if __name__ == "__main__":
-#     raw    = extract_data()
-#     merged = transform_sales(raw)
-#     out    = Path(__file__).resolve().parents[3] / "data" / "car_sales_enriched.csv"
-#     merged.to_csv(out, index=False)
-#     logger.info(f"Wrote enriched CSV to {out}")
