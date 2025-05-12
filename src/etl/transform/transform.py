@@ -19,12 +19,15 @@ def load_population_monthly() -> pd.DataFrame:
 
 def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
     from etl.transform.clean_sales import (
-        clean_dates, clean_strings, drop_empty, fill_numeric, drop_duplicates
+        clean_dates, drop_empty, fill_numeric, drop_duplicates
+    )
+    
+    df_raw = df_raw.rename(
+        columns=lambda col: col.strip().replace(" ", "_")
     )
     df = (
         df_raw
         .pipe(clean_dates)
-        .pipe(clean_strings)
         .pipe(drop_empty)
         .pipe(fill_numeric)
         .pipe(drop_duplicates)
@@ -33,9 +36,10 @@ def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
     df = df.drop(columns="year")
     df = df.rename(columns={
         "Date": "date",
-        "Car Make": "make",
-        "Car Model": "model",
-        "Car Price": "price",
+        "Car_Make": "make",
+        "Car_Model": "model",
+        "Sale_Price": "price",
     })
+    df.columns = df.columns.str.lower()
     logger.info(f"Transformed sales: {df.shape[0]} rows")
     return df
