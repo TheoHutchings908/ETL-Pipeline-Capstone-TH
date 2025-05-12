@@ -1,12 +1,12 @@
 import os
-from dotenv import load_dotenv
 import pandas as pd
 from sqlalchemy import create_engine
 from utils.logging_utils import setup_logger
 
-logger = setup_logger(__name__, "load_data.log")
 
-load_dotenv()
+engine = create_engine(os.environ["DATABASE_URL"], echo=False)
+
+logger = setup_logger(__name__, "load_data.log")
 
 DB_URL = (
     f"postgresql://{os.getenv('POSTGRES_USER')}:" 

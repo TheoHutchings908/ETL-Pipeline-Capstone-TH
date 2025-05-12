@@ -1,19 +1,13 @@
 import os
 import pandas as pd
 from sqlalchemy import create_engine
-from dotenv import load_dotenv
 
-load_dotenv()
+
+engine = create_engine(os.environ["DATABASE_URL"], echo=False)
 
 
 def get_engine():
-    url = os.getenv("DATABASE_URL") or (
-        f"postgresql://{os.getenv('POSTGRES_USER')}:"
-        f"{os.getenv('POSTGRES_PASSWORD')}@"
-        f"{os.getenv('POSTGRES_HOST')}:"
-        f"{os.getenv('POSTGRES_PORT')}/"
-        f"{os.getenv('POSTGRES_DB')}"
-    )
+    url = os.environ["DATABASE_URL"]
     return create_engine(url, echo=False)
 
 

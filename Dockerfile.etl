@@ -1,0 +1,21 @@
+# Dockerfile.etl
+FROM python:3.10-slim
+WORKDIR /app
+
+# 1) Copy metadata & deps for caching
+COPY setup.py requirements.txt ./
+RUN pip install --upgrade pip \
+ && pip install --no-cache-dir -r requirements.txt
+
+# 2) Copy all of your source code (including utils)
+COPY src/ src/
+COPY scripts/ scripts/
+COPY config/ config/
+
+# 3) Install your local package
+RUN pip install --no-cache-dir -e .
+
+COPY data/ data/
+
+CMD ["python", "scripts/run_etl.py"]
+

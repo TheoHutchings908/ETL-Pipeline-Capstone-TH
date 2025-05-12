@@ -1,18 +1,41 @@
-version: "3.8"
+version: '3.8'
+
 services:
   db:
     image: postgres:15
     restart: unless-stopped
     env_file:
       - .env
+    environment:
+      POSTGRES_PASSWORD: DfIsTheBest   # superuser password
     ports:
-      - "${POSTGRES_PORT:-5433}:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER}"]
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 10s
       retries: 5
 
-volumes:
-  postgres_data:
+  etl:
+    build:
+      context: .
+      dockerfile: Dockerfile.etl
+    env_file:
+      - .env
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data
+    command: ["python", "scripts/run_etl.py"]
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    env_file:
+      - .env
+    depends_on:
+      - db
+    ports:
+      - "8501:8501"
+    command: ["streamlit", "run", "app/streamlit_app.py", "--server.port=8501"]
+

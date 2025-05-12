@@ -3,6 +3,8 @@ import streamlit as st
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
+import altair as alt
+
 
 from db_utils import load_all_sales, get_engine
 
@@ -14,7 +16,8 @@ def main():
         initial_sidebar_state="expanded",
     )
     st.title("🚗 Car Sales Dashboard")
-    #load data
+    
+    # load data
     df_all = load_all_sales()
     if "price" not in df_all.columns:
         if "Sale Price" in df_all.columns:
@@ -172,14 +175,54 @@ def main():
         labels={"fuel_type": "Fuel Type", "percent": "% of Sales"}
     )
 
-    # 3) Show it
     st.plotly_chart(fig_fuel, use_container_width=True)
     
     st.markdown("---")
+ 
+    # 7) price against gender
+    avg_price = (
+        df.groupby('gender')['price']
+        .mean()
+        .reset_index(name='avg_price')
+    )
 
-    # ) data expander + download
+    counts = (
+        df.groupby(['gender','payment_method'])
+        .size()
+        .reset_index(name='count')
+        .merge(df.groupby('gender').size().reset_index(name='total'), on='gender')
+        .merge(avg_price, on='gender')
+    )
+    counts['proportion'] = counts['count'] / counts['total']
+    counts['height']     = counts['avg_price'] * counts['proportion']
+
+    chart = (
+        alt.Chart(counts)
+        .mark_bar()
+        .encode(
+            x=alt.X('gender:N', title='Gender'),
+            y=alt.Y('height:Q', title='Average Sale Price'),
+            color=alt.Color('payment_method:N', title='Payment Method'),
+            tooltip=[
+                alt.Tooltip('count:Q', title='Count'),
+                alt.Tooltip('proportion:Q', format='.0%', title='Pct of Customers'),
+                alt.Tooltip('avg_price:Q', format=',.2f', title='Avg Price')
+            ]
+        )
+        .properties(
+            width=600,
+            height=400,
+            title='Avg Sale Price by Gender with Payment Method Breakdown'
+        )
+    )
+
+    st.title('Sales Analysis Dashboard')
+    st.altair_chart(chart, use_container_width=True)
+
     st.markdown("---")
-    with st.expander("🔽 Showsales data"):
+
+    #  data expander + download
+    with st.expander("🔽 Show sales data"):
         st.dataframe(df, use_container_width=True, hide_index=True)
         csv = df.to_csv(index=False).encode("utf-8")
         st.download_button(
