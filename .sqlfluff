@@ -1,0 +1,9 @@
+[sqlfluff]
+dialect = postgres
+exclude_rules = AM04, LT09, LT01
+
+[sqlfluff:layout:type:binary_operator]
+line_position = trailing
+
+[sqlfluff:rules:capitalisation.keywords] 
+capitalisation_policy = upper 

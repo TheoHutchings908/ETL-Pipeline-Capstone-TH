@@ -1,0 +1,26 @@
+# Dockerfile.streamlit
+FROM python:3.10-slim
+
+# 1. Install system deps (if you still need git for other reasons; otherwise drop this)
+RUN apt-get update \
+ && apt-get install -y git \
+ && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# 2. Copy metadata and requirements for caching
+COPY setup.py  requirements.txt ./
+
+# 3. Install PyPI deps (no more git+ entries!)
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 4. Copy your project code and config
+COPY src/ src/
+COPY app/ app/
+
+# 5. Install your package in editable mode
+RUN pip install --no-cache-dir -e .
+
+# 6. Expose Streamlit port and default command
+EXPOSE 8501
+CMD ["streamlit", "run", "app/streamlit_app.py", "--server.port=8501"]
