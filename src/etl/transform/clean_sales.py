@@ -20,20 +20,6 @@ def clean_dates(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# def clean_strings(df: pd.DataFrame) -> pd.DataFrame:
-#     # Trim whitespace and title-case key text columns.
-#     df = df.copy()
-#     text_cols = ['Salesperson', 'Customer Name', 'Car Make', 'Car Model']
-#     for col in text_cols:
-#         df[col] = (
-#             df[col]
-#             .astype(str)
-#             .str.strip()
-#             .str.title()
-#         )
-#     return df
-
-
 def fill_numeric(df: pd.DataFrame) -> pd.DataFrame:
     # Fill missing numeric columns with their median.
     df = df.copy()

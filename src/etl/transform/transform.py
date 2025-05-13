@@ -21,7 +21,7 @@ def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
     from etl.transform.clean_sales import (
         clean_dates, drop_empty, fill_numeric, drop_duplicates
     )
-    
+
     df_raw = df_raw.rename(
         columns=lambda col: col.strip().replace(" ", "_")
     )
@@ -40,6 +40,7 @@ def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
         "Car_Model": "model",
         "Sale_Price": "price",
     })
+
     df.columns = df.columns.str.lower()
     logger.info(f"Transformed sales: {df.shape[0]} rows")
     return df
