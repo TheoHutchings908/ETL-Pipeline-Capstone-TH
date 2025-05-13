@@ -3,12 +3,8 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 
-engine = create_engine(os.environ["DATABASE_URL"], echo=False)
-
-
 def get_engine():
-    url = os.environ["DATABASE_URL"]
-    return create_engine(url, echo=False)
+    return create_engine(os.environ["DATABASE_URL"], echo=False)
 
 
 def get_available_years() -> list[int]:

@@ -10,7 +10,6 @@ RUN pip install --upgrade pip \
 # 2) Copy all of your source code (including utils)
 COPY src/ src/
 COPY scripts/ scripts/
-COPY config/ config/
 
 # 3) Install your local package
 RUN pip install --no-cache-dir -e .

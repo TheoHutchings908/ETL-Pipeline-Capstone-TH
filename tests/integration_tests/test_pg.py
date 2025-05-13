@@ -1,6 +1,3 @@
-from dotenv import load_dotenv
-load_dotenv()
-
 import os, psycopg2
 
 print("HOST:", os.getenv("POSTGRES_HOST"))

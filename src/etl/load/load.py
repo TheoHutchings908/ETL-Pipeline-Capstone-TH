@@ -3,27 +3,11 @@ import pandas as pd
 from sqlalchemy import create_engine
 from utils.logging_utils import setup_logger
 
-
-engine = create_engine(os.environ["DATABASE_URL"], echo=False)
-
 logger = setup_logger(__name__, "load_data.log")
-
-DB_URL = (
-    f"postgresql://{os.getenv('POSTGRES_USER')}:" 
-    f"{os.getenv('POSTGRES_PASSWORD')}@"
-    f"{os.getenv('POSTGRES_HOST', 'localhost')}:" 
-    f"{os.getenv('POSTGRES_PORT', '5432')}/"
-    f"{os.getenv('POSTGRES_DB')}"
-)
-
-_engine = None
 
 
 def get_engine():
-    global _engine
-    if _engine is None:
-        _engine = create_engine(DB_URL, echo=False)
-    return _engine
+    return create_engine(os.environ["DATABASE_URL"], echo=False)
 
 
 def write_table(df: pd.DataFrame, table_name: str):
