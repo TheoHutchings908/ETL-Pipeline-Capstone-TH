@@ -1,0 +1,48 @@
+2025-05-02 13:09:29,429 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 13:09:29,430 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 13:09:29,430 - etl.extract.extract - INFO - Execution time: 0.009730800011311658 seconds
+2025-05-02 13:09:29,430 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.004865400005655829 seconds
+2025-05-02 13:09:29,431 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-02 13:10:36,362 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 13:10:36,362 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 13:10:36,362 - etl.extract.extract - INFO - Execution time: 0.0032943999976851046 seconds
+2025-05-02 13:10:36,362 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.0016471999988425523 seconds
+2025-05-02 13:10:36,364 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-02 13:11:09,048 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 13:11:09,048 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 13:11:09,048 - etl.extract.extract - INFO - Execution time: 0.0032611999922664836 seconds
+2025-05-02 13:11:09,048 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.0016305999961332418 seconds
+2025-05-02 13:11:09,050 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-02 13:11:24,810 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 13:11:24,810 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 13:11:24,811 - etl.extract.extract - INFO - Execution time: 0.0034388999920338392 seconds
+2025-05-02 13:11:24,811 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.0017194499960169196 seconds
+2025-05-02 13:11:24,812 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-02 13:53:45,725 - __main__ - ERROR - Error loading C:\Users\theoh\Documents\digital_futures\week_6\ETL\ETL-Pipeline-Capstone\src\etl\extract\../../data/car_sales_data.csv: [Errno 2] No such file or directory: 'C:\\Users\\theoh\\Documents\\digital_futures\\week_6\\ETL\\ETL-Pipeline-Capstone\\src\\etl\\extract\\../../data/car_sales_data.csv'
+2025-05-02 13:55:20,251 - __main__ - ERROR - Error loading C:\Users\theoh\Documents\digital_futures\week_6\ETL\ETL-Pipeline-Capstone\src\data\car_sales_data.csv: [Errno 2] No such file or directory: 'C:\\Users\\theoh\\Documents\\digital_futures\\week_6\\ETL\\ETL-Pipeline-Capstone\\src\\data\\car_sales_data.csv'
+2025-05-02 13:57:31,394 - __main__ - INFO - Data extraction successful for csv!
+2025-05-02 13:57:31,394 - __main__ - INFO - Extracted 2500000 rows and 9 columns
+2025-05-02 13:57:31,395 - __main__ - INFO - Execution time: 2.9708499000116717 seconds
+2025-05-02 13:57:31,395 - __main__ - INFO - Execution time per row: 1.1883399600046687e-06 seconds
+2025-05-02 14:08:22,616 - __main__ - INFO - Data extraction successful for csv!
+2025-05-02 14:08:22,617 - __main__ - INFO - Extracted 2500000 rows and 9 columns
+2025-05-02 14:08:22,617 - __main__ - INFO - Execution time: 3.0054551000066567 seconds
+2025-05-02 14:08:22,617 - __main__ - INFO - Execution time per row: 1.2021820400026626e-06 seconds
+2025-05-02 14:25:45,720 - __main__ - INFO - Data extraction successful for csv!
+2025-05-02 14:25:45,721 - __main__ - INFO - Extracted 1058221 rows and 9 columns
+2025-05-02 14:25:45,721 - __main__ - INFO - Execution time: 1.1382522999920184 seconds
+2025-05-02 14:25:45,721 - __main__ - INFO - Execution time per row: 1.0756281532799089e-06 seconds
+2025-05-02 14:26:33,223 - __main__ - INFO - Data extraction successful for csv!
+2025-05-02 14:26:33,224 - __main__ - INFO - Extracted 1058221 rows and 9 columns
+2025-05-02 14:26:33,224 - __main__ - INFO - Execution time: 1.1038241000060225 seconds
+2025-05-02 14:26:33,224 - __main__ - INFO - Execution time per row: 1.043094117397049e-06 seconds
+2025-05-02 14:29:46,146 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 14:29:46,146 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 14:29:46,146 - etl.extract.extract - INFO - Execution time: 0.004029200004879385 seconds
+2025-05-02 14:29:46,146 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.0020146000024396926 seconds
+2025-05-02 14:29:46,148 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-02 15:25:51,219 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-02 15:25:51,219 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-02 15:25:51,220 - etl.extract.extract - INFO - Execution time: 0.0034948000102303922 seconds
+2025-05-02 15:25:51,220 - etl.extract.extract - WARNING - Execution time per row exceeds 0.0001: 0.0017474000051151961 seconds
+2025-05-02 15:25:51,221 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'

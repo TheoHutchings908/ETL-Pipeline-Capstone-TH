@@ -1,0 +1,3 @@
+[console_scripts]
+run-etl = scripts.run_etl:main
+run-tests = tests.run_tests:main

@@ -1,0 +1,197 @@
+2025-05-07 14:26:13,318 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:26:13,319 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:26:13,319 - etl.extract.extract - INFO - Execution time: 1.0342377999913879 seconds
+2025-05-07 14:26:13,319 - etl.extract.extract - INFO - Execution time per row: 9.773363030892299e-07 seconds
+2025-05-07 14:29:02,083 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:29:02,083 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:29:02,084 - etl.extract.extract - INFO - Execution time: 1.067442100000335 seconds
+2025-05-07 14:29:02,084 - etl.extract.extract - INFO - Execution time per row: 1.0087137752892212e-06 seconds
+2025-05-07 14:31:19,527 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:31:19,528 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:31:19,528 - etl.extract.extract - INFO - Execution time: 1.030570599992643 seconds
+2025-05-07 14:31:19,528 - etl.extract.extract - INFO - Execution time per row: 9.738708643966082e-07 seconds
+2025-05-07 14:31:48,783 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:31:48,784 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:31:48,784 - etl.extract.extract - INFO - Execution time: 1.0406778999895323 seconds
+2025-05-07 14:31:48,784 - etl.extract.extract - INFO - Execution time per row: 9.834220829009557e-07 seconds
+2025-05-07 14:32:51,052 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:32:51,053 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:32:51,053 - etl.extract.extract - INFO - Execution time: 1.0553948000015225 seconds
+2025-05-07 14:32:51,053 - etl.extract.extract - INFO - Execution time per row: 9.973292913309436e-07 seconds
+2025-05-07 14:36:30,373 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-07 14:36:30,374 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-07 14:36:30,374 - etl.extract.extract - INFO - Execution time: 1.0747348000004422 seconds
+2025-05-07 14:36:30,375 - etl.extract.extract - INFO - Execution time per row: 1.0156052469195396e-06 seconds
+2025-05-08 15:55:54,279 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 15:55:54,279 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 15:55:54,280 - etl.extract.extract - INFO - Execution time: 1.211 seconds
+2025-05-08 15:55:54,280 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 15:57:10,788 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 15:57:10,789 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 15:57:10,789 - etl.extract.extract - INFO - Execution time: 1.069 seconds
+2025-05-08 15:57:10,789 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 16:12:56,765 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 16:12:56,766 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 16:12:56,766 - etl.extract.extract - INFO - Execution time: 1.038 seconds
+2025-05-08 16:12:56,767 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 16:26:50,833 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 16:26:50,834 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 16:26:50,834 - etl.extract.extract - INFO - Execution time: 1.057 seconds
+2025-05-08 16:26:50,835 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 16:44:49,733 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 16:44:49,734 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 16:44:49,734 - etl.extract.extract - INFO - Execution time: 1.071 seconds
+2025-05-08 16:44:49,734 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 16:45:49,819 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 16:45:49,820 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 16:45:49,820 - etl.extract.extract - INFO - Execution time: 1.124 seconds
+2025-05-08 16:45:49,820 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 19:21:18,247 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 19:21:18,248 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 19:21:18,248 - etl.extract.extract - INFO - Execution time: 1.110 seconds
+2025-05-08 19:21:18,248 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 19:24:38,888 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 19:24:38,889 - etl.extract.extract - INFO - Extracted 1058221 rows and 9 columns
+2025-05-08 19:24:38,889 - etl.extract.extract - INFO - Execution time: 1.054 seconds
+2025-05-08 19:24:38,889 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 19:38:34,353 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 19:38:34,353 - etl.extract.extract - INFO - Extracted 1058221 rows and 13 columns
+2025-05-08 19:38:34,354 - etl.extract.extract - INFO - Execution time: 1.383 seconds
+2025-05-08 19:38:34,354 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 21:01:21,521 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 21:01:21,522 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-08 21:01:21,522 - etl.extract.extract - INFO - Execution time: 0.702 seconds
+2025-05-08 21:01:21,522 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-08 21:12:10,558 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-08 21:12:10,559 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-08 21:12:10,559 - etl.extract.extract - INFO - Execution time: 0.717 seconds
+2025-05-08 21:12:10,559 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-09 10:18:32,421 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-09 10:18:32,421 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-09 10:18:32,421 - etl.extract.extract - INFO - Execution time: 0.720 seconds
+2025-05-09 10:18:32,421 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-09 10:34:53,956 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-09 10:34:53,956 - etl.extract.extract - INFO - Extracted 2 rows and 3 columns
+2025-05-09 10:34:53,957 - etl.extract.extract - INFO - Execution time: 0.011 seconds
+2025-05-09 10:34:53,957 - etl.extract.extract - WARNING - Execution time per row (0.005313s) exceeds expected rate of 0.000100s
+2025-05-09 10:34:53,958 - etl.extract.extract - ERROR - Error loading /no/such/file.csv: [Errno 2] No such file or directory: '/no/such/file.csv'
+2025-05-09 15:02:20,465 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-09 15:02:20,465 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-09 15:02:20,466 - etl.extract.extract - INFO - Execution time: 0.913 seconds
+2025-05-09 15:02:20,466 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 10:15:28,658 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 10:15:28,659 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 10:15:28,659 - etl.extract.extract - INFO - Execution time: 0.742 seconds
+2025-05-10 10:15:28,659 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-10 11:46:26,592 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 11:46:26,593 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 11:46:26,593 - etl.extract.extract - INFO - Execution time: 0.751 seconds
+2025-05-10 11:46:26,593 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 15:37:19,015 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 15:37:19,015 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 15:37:19,015 - etl.extract.extract - INFO - Execution time: 0.822 seconds
+2025-05-10 15:37:19,016 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:00:37,141 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:00:37,141 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:00:37,142 - etl.extract.extract - INFO - Execution time: 0.759 seconds
+2025-05-10 16:00:37,142 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:04:33,327 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:04:33,327 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:04:33,327 - etl.extract.extract - INFO - Execution time: 0.741 seconds
+2025-05-10 16:04:33,328 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-10 16:06:43,760 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:06:43,761 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:06:43,761 - etl.extract.extract - INFO - Execution time: 0.820 seconds
+2025-05-10 16:06:43,761 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:06:44,910 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:06:44,910 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:06:44,910 - etl.extract.extract - INFO - Execution time: 0.835 seconds
+2025-05-10 16:06:44,911 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:08:00,222 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:08:00,222 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:08:00,222 - etl.extract.extract - INFO - Execution time: 0.728 seconds
+2025-05-10 16:08:00,223 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-10 16:08:01,202 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:08:01,202 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:08:01,202 - etl.extract.extract - INFO - Execution time: 0.716 seconds
+2025-05-10 16:08:01,202 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-10 16:10:00,436 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:10:00,437 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:10:00,437 - etl.extract.extract - INFO - Execution time: 0.782 seconds
+2025-05-10 16:10:00,437 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:13:23,724 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:13:23,724 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:13:23,724 - etl.extract.extract - INFO - Execution time: 0.766 seconds
+2025-05-10 16:13:23,724 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-10 16:27:07,732 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 16:27:07,732 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 16:27:07,732 - etl.extract.extract - INFO - Execution time: 0.725 seconds
+2025-05-10 16:27:07,732 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-10 17:18:10,519 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-10 17:18:10,520 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-10 17:18:10,520 - etl.extract.extract - INFO - Execution time: 0.769 seconds
+2025-05-10 17:18:10,520 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:40:05,370 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:40:05,370 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:40:05,371 - etl.extract.extract - INFO - Execution time: 1.056 seconds
+2025-05-12 10:40:05,371 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:55:48,687 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:55:48,687 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:55:48,688 - etl.extract.extract - INFO - Execution time: 0.754 seconds
+2025-05-12 10:55:48,688 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:56:47,111 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:56:47,112 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:56:47,112 - etl.extract.extract - INFO - Execution time: 0.786 seconds
+2025-05-12 10:56:47,112 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:57:09,728 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:57:09,729 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:57:09,729 - etl.extract.extract - INFO - Execution time: 0.747 seconds
+2025-05-12 10:57:09,729 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:58:15,224 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:58:15,224 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:58:15,224 - etl.extract.extract - INFO - Execution time: 0.800 seconds
+2025-05-12 10:58:15,224 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 10:58:50,763 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 10:58:50,764 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 10:58:50,764 - etl.extract.extract - INFO - Execution time: 0.750 seconds
+2025-05-12 10:58:50,764 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 11:02:11,493 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 11:02:11,493 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 11:02:11,493 - etl.extract.extract - INFO - Execution time: 0.741 seconds
+2025-05-12 11:02:11,493 - etl.extract.extract - INFO - Execution time per row: 0.000001 seconds
+2025-05-12 11:04:14,764 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 11:04:14,764 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 11:04:14,764 - etl.extract.extract - INFO - Execution time: 0.860 seconds
+2025-05-12 11:04:14,764 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 11:09:42,732 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 11:09:42,732 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 11:09:42,732 - etl.extract.extract - INFO - Execution time: 0.848 seconds
+2025-05-12 11:09:42,732 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 12:51:18,358 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 12:51:18,358 - etl.extract.extract - INFO - Extracted 495973 rows and 14 columns
+2025-05-12 12:51:18,359 - etl.extract.extract - INFO - Execution time: 0.778 seconds
+2025-05-12 12:51:18,359 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 13:06:37,917 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 13:06:37,917 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 13:06:37,918 - etl.extract.extract - INFO - Execution time: 0.765 seconds
+2025-05-12 13:06:37,918 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 14:20:02,003 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 14:20:02,003 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 14:20:02,003 - etl.extract.extract - INFO - Execution time: 0.825 seconds
+2025-05-12 14:20:02,003 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 14:21:17,805 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 14:21:17,805 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 14:21:17,805 - etl.extract.extract - INFO - Execution time: 0.802 seconds
+2025-05-12 14:21:17,805 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 14:21:34,855 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 14:21:34,855 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 14:21:34,855 - etl.extract.extract - INFO - Execution time: 0.787 seconds
+2025-05-12 14:21:34,856 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 14:23:37,737 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 14:23:37,737 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 14:23:37,737 - etl.extract.extract - INFO - Execution time: 0.786 seconds
+2025-05-12 14:23:37,738 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
+2025-05-12 14:24:19,230 - etl.extract.extract - INFO - Data extraction successful for csv!
+2025-05-12 14:24:19,230 - etl.extract.extract - INFO - Extracted 495973 rows and 15 columns
+2025-05-12 14:24:19,230 - etl.extract.extract - INFO - Execution time: 0.801 seconds
+2025-05-12 14:24:19,230 - etl.extract.extract - INFO - Execution time per row: 0.000002 seconds
