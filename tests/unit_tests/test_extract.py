@@ -1,8 +1,6 @@
 import pandas as pd
 import pytest
 from pathlib import Path
-
-# adjust this import to exactly where your extract lives:
 from etl.extract.extract import extract_data, FILE_PATH  
 
 

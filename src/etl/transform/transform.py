@@ -2,6 +2,9 @@ import logging
 from pathlib import Path
 import pandas as pd
 from utils.logging_utils import setup_logger
+from etl.transform.clean_sales import (
+    clean_dates, drop_empty, fill_numeric, drop_duplicates
+    )
 
 logger = setup_logger(__name__, "transforming_data.log", level=logging.DEBUG)
 
@@ -18,10 +21,6 @@ def load_population_monthly() -> pd.DataFrame:
 
 
 def transform_sales(df_raw: pd.DataFrame) -> pd.DataFrame:
-    from etl.transform.clean_sales import (
-        clean_dates, drop_empty, fill_numeric, drop_duplicates
-    )
-
     df_raw = df_raw.rename(
         columns=lambda col: col.strip().replace(" ", "_")
     )
