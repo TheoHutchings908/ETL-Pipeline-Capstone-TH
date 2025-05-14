@@ -53,14 +53,12 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
    - **Run ETL to load data**  
 
      ```bash
-     docker-compose build etl
      docker-compose run --rm etl
      ```
 
    - **Launch Streamlit dashboard**  
 
      ```bash
-      docker-compose build streamlit
       docker-compose up streamlit
      ```
 
