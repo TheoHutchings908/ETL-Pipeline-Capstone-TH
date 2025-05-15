@@ -2,12 +2,10 @@ import pandas as pd
 
 
 def drop_duplicates(df: pd.DataFrame) -> pd.DataFrame:
-    # Remove exact duplicate rows.
     return df.drop_duplicates()
 
 
 def drop_empty(df: pd.DataFrame) -> pd.DataFrame:
-    # Drop rows missing a Date or Sale Price.
     return df.dropna(subset=['Date', 'Sale_Price'])
 
 
@@ -21,7 +19,6 @@ def clean_dates(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def fill_numeric(df: pd.DataFrame) -> pd.DataFrame:
-    # Fill missing numeric columns with their median.
     df = df.copy()
     num_cols = ['Car_Year',
                 'Sale_Price',
