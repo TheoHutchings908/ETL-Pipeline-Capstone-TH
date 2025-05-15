@@ -9,7 +9,7 @@ setup(
     version="0.1.0",
     description=("An ETL project for extracting, transforming, and loading data."),
     author="Theo Hutchings",
-    author_email="ewright@digitalfutures.com",
+    author_email="x",
     url="https://github.com/TheoHutchings908/ETL-Pipeline-Capstone",
     packages=find_packages(),
     include_package_data=True,
