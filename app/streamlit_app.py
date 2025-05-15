@@ -98,7 +98,7 @@ def main():
 
     st.markdown("---")
     
-    # 5) Sales vs Population 
+    # 5) Sales vs Population using AI assistance
     engine = get_engine()
     sql = """
     WITH filtered_sales AS (
@@ -179,7 +179,7 @@ def main():
     
     st.markdown("---")
  
-    # 7) price against gender
+    # 7) price against gender with AI assistance
     avg_price = (
         df.groupby('gender')['price']
         .mean()
