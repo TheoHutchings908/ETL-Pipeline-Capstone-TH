@@ -20,7 +20,7 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
 
 ## Prerequisites
 
-- Docker & Docker Compose installed on your machine  
+- Docker Desktop (please be careful and do research on if your CPU is ok with running this application)  
 - (Optional) Local Python environment for development  
 
 ## Project Structure
