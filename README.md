@@ -7,8 +7,8 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
 
 ### User Stories
 
-* **As an Executive**, I want to download the filtered dataset as a CSV so that I can perform deeper ad-hoc analysis in my own tools.
 * **As a Data Engineer**, I want to run the ETL pipeline in Docker container.
+* **As an Executive**, I want to download the filtered dataset as a CSV so that I can perform deeper ad-hoc analysis in my own tools.
 * **As a QA Engineer**, I want to have automated tests for data quality (e.g., no missing dates, matching makes/models) so that regressions are caught early.
 
 ## Features

@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 from pathlib import Path
-from etl.extract.extract import extract_data, FILE_PATH  
+from etl.extract.extract import extract_data, FILE_PATH
 
 # Using AI assistance
 
