@@ -7,12 +7,8 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
 
 ### User Stories
 
-* **As a Sales Manager**, I want to filter sales data by year and make so that I can focus on the segments I’m responsible for.
-* **As a Finance Analyst**, I want to see total revenue and average sale price KPIs at a glance so that I can monitor financial performance.
-* **As a Marketing Lead**, I want to view monthly transaction trends alongside population changes so that I can correlate campaign timing with market size.
 * **As an Executive**, I want to download the filtered dataset as a CSV so that I can perform deeper ad-hoc analysis in my own tools.
-* **As a Data Engineer**, I want to automate the ETL pipeline in Docker containers on a server so that fresh data is loaded and cleaned without manual intervention.
-* **As a DevOps Engineer**, I want to deploy the entire stack (ETL, Postgres, Streamlit) via Docker Compose (or Kubernetes) so that it’s portable, versioned, and easily reproducible.
+* **As a Data Engineer**, I want to run the ETL pipeline in Docker container.
 * **As a QA Engineer**, I want to have automated tests for data quality (e.g., no missing dates, matching makes/models) so that regressions are caught early.
 
 ## Features
@@ -27,7 +23,33 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
 - Docker & Docker Compose installed on your machine  
 - (Optional) Local Python environment for development  
 
+## Project Structure
+
 ---
+```
+ETL-Pipeline-Capstone/
+├── Dockerfile.etl             # ETL service Dockerfile
+├── Dockerfile.streamlit       # Streamlit service Dockerfile
+├── docker-compose.yml         # Compose file orchestrating all services
+├── .env.example               # Example environment variables file
+├── setup.py                   # Package & entry-point setup
+├── requirements.txt           # Python dependencies
+├── src/
+│   └── etl/
+│       ├── extract/           # CSV extraction logic
+│       ├── transform/         # Data cleaning & transformation
+│       └── load/              # Postgres loading logic
+│   └── utils/                 # Shared utilities (logging, config, etc.)
+├── scripts/
+│   └── run_etl.py             # ETL pipeline launcher
+├── app/
+│   ├── db_utils.py            # DB connection & queries
+│   └── streamlit_app.py       # Streamlit dashboard
+├── data/                      # Raw CSV data input
+├── logs/                      # Log files generated at runtime
+├── tests/                     # Pytest test suite
+└── README.md                  # Project README (this file)
+```
 
 ## Getting Started
 
@@ -80,44 +102,6 @@ This repository contains a complete ETL (Extract, Transform, Load) pipeline and 
    ```
 
 ---
-
-## Services
-
-- **db**: PostgreSQL 15  
-- **etl**: Python ETL pipeline (entry: `scripts/run_etl.py`)  
-- **streamlit**: Streamlit dashboard (entry: `app/streamlit_app.py`)  
-
----
-
-## Project Structure
-
-```
-ETL-Pipeline-Capstone/
-├── Dockerfile.etl             # ETL service Dockerfile
-├── Dockerfile.streamlit       # Streamlit service Dockerfile
-├── docker-compose.yml         # Compose file orchestrating all services
-├── .env.example               # Example environment variables file
-├── setup.py                   # Package & entry-point setup
-├── requirements.txt           # Python dependencies
-├── src/
-│   └── etl/
-│       ├── extract/           # CSV extraction logic
-│       ├── transform/         # Data cleaning & transformation
-│       └── load/              # Postgres loading logic
-│   └── utils/                 # Shared utilities (logging, config, etc.)
-├── scripts/
-│   └── run_etl.py             # ETL pipeline launcher
-├── app/
-│   ├── db_utils.py            # DB connection & queries
-│   └── streamlit_app.py       # Streamlit dashboard
-├── data/                      # Raw CSV data input
-├── logs/                      # Log files generated at runtime
-├── tests/                     # Pytest test suite
-└── README.md                  # Project README (this file)
-```
----
-
-Thought for a couple of seconds
 
 ## what would i do differently?
 
