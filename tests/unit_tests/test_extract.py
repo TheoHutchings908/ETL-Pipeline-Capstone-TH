@@ -3,6 +3,8 @@ import pytest
 from pathlib import Path
 from etl.extract.extract import extract_data, FILE_PATH  
 
+# Using AI assistance
+
 
 def test_extract_data_happy_path(tmp_path, monkeypatch):
     # 1) spin up a tiny CSV

@@ -1,14 +1,14 @@
 import sys
 
+# Using AI assistance
+
 
 def run_pytest():
-    """Run tests via pytest."""
     import pytest
     return pytest.main()
 
 
 def run_unittest():
-    """Run tests via unittest discovery."""
     import unittest
     loader = unittest.TestLoader()
     # Discover tests in current directory matching test*.py
@@ -20,7 +20,6 @@ def run_unittest():
 
 
 def main():
-    """Attempt pytest first; if unavailable, use unittest."""
     try:
         return run_pytest()
     except ImportError:

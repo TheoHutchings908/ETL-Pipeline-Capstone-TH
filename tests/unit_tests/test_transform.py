@@ -5,7 +5,7 @@ import pytest
 from etl.transform.clean_sales import drop_duplicates, drop_empty, clean_dates, fill_numeric
 
 
-@pytest.fixture
+@pytest.fixture # Using AI assistance
 def sample_df():
     return pd.DataFrame({
         "Date": [

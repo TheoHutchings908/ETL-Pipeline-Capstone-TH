@@ -65,8 +65,8 @@ def main():
 
     # Bottom row: Avg Price, Top Fuel, Top Age Group
     c3, c4 = st.columns(2)
-    c3.metric("🔖 Avg. Price",     f"${avg_price:,.0f}")
-    c4.metric("👥 Top Age Group",   f"{top_age_group}", f"{top_age_count:,} cars")
+    c3.metric("🔖 Avg. Price", f"${avg_price:,.0f}")
+    c4.metric("👥 Top Age Group", f"{top_age_group}", f"{top_age_count:,} cars")
 
     st.markdown("---")
 
